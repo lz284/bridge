@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<!--
+	Template free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Pi_Pirate Research Group website showing off many of the current projects. 
+	author@ Colby Sawyer (colby-sawyer.com)
+-->
+<html>
+	<head>
+		<title>BRIDGES - Log-In</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
+                <section class="banner style2 orient-center content-align-center image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+                    <div class="content align-center">
+			<!-- Form -->
+                        <section class="wrapper style1 align-center" id="form">
+                                <div id = "login" class = "index align-center">
+							        <form>
+							        <div class="fields stacked">
+										<div>
+											<a href="index.html" class="button small icon solid fa-home smooth-scroll center align-center">Home</a>
+											<h2>Welcome to BRIDGES</h2>
+										</div>
+										
+								        <div id = "login-form" class="field">
+                                        	<input type="email" name="email" id="email" value="" required />
+								        	<label for="username">Email</label>
+						                </div>
+						                <div class="field">
+                                            <input type="password" name="password" id="password" value="" required/>
+                                            <label for="password">Password</label>
+										</div>
+										<!--
+									    <div class="field half align-left">
+									        <input type="checkbox required" id="human" name="human" value = "" />
+                                            <label for="human">Not a Robot</label>
+                                            <p></p>
+										</div>
+									-->
+									    <div class="actions align-center">
+											<p></p>
+											<a id="login-button" class="button big wide smooth-scroll-middle">Login</a> 
+										</div>
+										<div class="actions align-center">
+											<p></p>
+											<a id="forgot-password-button" class="button big wide smooth-scroll-middle">Forgot Password</a>                                        
+										</div>
+                                    </div>
+                                    </form>
+									<p><strong>This space is reserved for the project team and members of supported projects. If you would like to become a BRIDGES user, <a href = "mailto:popoviciuc18@ecu.edu">contact us</a></strong></p>
+                                </div>
+                        </section>
+                    </div>
+                    <div class="image">
+                        <img src="images/bridge.jpg" alt="" />
+                    </div>
+                </section>
+			</div>
+				<!-- Footer 
+                <footer class="wrapper style1 align-center">
+                    <div class="inner">
+                        <ul class="icons">
+                            <li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+                            <li><a href= "#" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
+                            <li><a href="#" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                            <li><a href="mailto:sawyerc17@students.ecu.edu" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+                        </ul>
+                        <p>&copy; Untitled.</p> 
+                    </div>
+                </footer>
+			-->
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/firebase.js"></script>
+
+			<script>
+				firebase.auth().onAuthStateChanged(function(user){
+  					if(user){
+						 window.location.href = "loggedin.html"
+  					} else {
+						window.location.herf = "login.html"
+  					}
+				});
+			</script>
+
+		<!-- Note: Only needed for demo purposes. Delete for production sites. -->
+			<script src="assets/js/demo.js"></script>
+			
+	</body>
+</html>

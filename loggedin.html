@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<!--
+	Template free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Pi_Pirate Research Group website showing off many of the current projects. 
+	author@ Colby Sawyer (colby-sawyer.com)
+-->
+<html>
+	<head>
+		<title>BRIDGES - Intranet</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+		
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
+                <section class="banner style2 orient-center content-align-center image-position-right fullscreen onload-image-fade-in onload-content-fade-right">	
+					<div class="content align-center">
+						<!--<div class= "align-left">
+							<p id= "user-name">Account Name: </p>
+							<p id="user-email">Account Email: </p>
+						</div> -->
+						<h2>Welcome to the BRIDGES Intranet</h2>
+						<p> We are currently working to get more content added!</p>
+						<div id="userDisplay" class="align-center">
+							<div id="user" style="padding: 15px 10px 15px;">
+								<div id = "header-div" class="align-left" style = "padding: 10px 5px 5px;">
+									<a id="logout-button" class="button small wide smooth-scroll-middle ">Logout</a>
+								</div>
+								<div id="display-div">
+									<p id="emailDisplay" style="margin-bottom:10px; padding: 10px 20px 10px">Email</p>
+								</div>
+								<div id = "fields-div" class = "align-left" style="padding: 10px 10px 15px;">
+									<!--<a id="change-password-button" class="button small wide smooth-scroll-middle ">Change Password</a>
+									<a id="change-email-button" class = "button icon small fa-pen smooth-scroll-middle">Change Email</a> -->
+								</div>
+								<div id="update-div">
+									<button id="update-profile-button" class="button small wide smooth-scroll-middle ">Update Profile</button>
+									<!--<a id="cancel-profile-update-button" class="button small wide smooth-scroll-middle">Cancel</a>-->
+								</div>
+							</div>
+							<div id = "error-div" style="max-width: 400px;" class="align-center">
+							</div>
+						</div>
+						<!---
+						<div class="actions align-center">
+							<a id="logout-button" class="button small wide smooth-scroll-middle">Logout</a>
+							
+						</div> -->
+						<div class="content align-center">
+							<div id="documents" class="align-left">
+								<h2>Documents</h2>
+								<div id ="upload" class="actions align-center">
+									<div id = "append" class="page-main"></div>
+									<ul class = "actions stacked">
+										<div id = "files" class = "page-content"></div>
+										<label id="user-file-label"></label>
+									</ul>
+								</div>
+								<button id= "btnStartUpload" class="button small wide smooth-scroll-middle" >Upload File</button>
+							</div>
+						</div>
+						<div class="align-center">
+							<a id = "fun-button" href = "fun.html" class="button small wide smooth-scroll-middle disabled">Have a little fun</a>				
+							<a id = "add-user-button" href = "newUser.html" class = "button small wide smooth-scroll-middle">Add a new user</a>
+						</div>
+                    </div>
+                    <div class="image">
+                        <img src="images/bridge.jpg" alt="" />
+                    </div>
+                </section>
+			<!--</div>
+				 Footer 
+                <footer class="wrapper style1 align-center">
+                    <div class="inner">
+                        <ul class="icons">
+                            <li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+                            <li><a href= "#" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
+                            <li><a href="#" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                            <li><a href="mailto:sawyerc17@students.ecu.edu" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+                        </ul>
+                        <p>&copy; Untitled.</p> 
+                    </div>
+                </footer>
+			</div>-->
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/firebase.js"></script>
+			<script src="assets/js/menu.js"></script>
+
+			<script>
+				firebase.auth().onAuthStateChanged(function(user){
+  					if(!user){
+     					window.location.href = "login.html"
+  					} else{
+						//var userName = document.getElementById("usernameDisplay");
+						var userEmail = document.getElementById("emailDisplay");
+						//var name = user.displayName;
+						var email = user.email;
+						//userName.textContent = "Username: " + name;
+						userEmail.textContent =email;
+					  }
+				});
+			</script>
+		<!-- Note: Only needed for demo purposes. Delete for production sites. -->
+			<script src="assets/js/demo.js"></script>
+
+			
+	</body>
+</html>
